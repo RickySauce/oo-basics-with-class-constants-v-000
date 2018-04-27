@@ -6,15 +6,14 @@ class Shoe
 
   BRANDS = []
 
+
   def initialize(brand)
       @brand = brand
-
-      BRANDS << brand if !BRANDS.any? {|existing_brands| existing_brands == brand}
+      BRANDS << brand if BRANDS.any? do |existing_brands|
+        BRANDS == nil || existing_brands != brand
+          end
   end
 
- def self.call_brands
-   BRANDS
- end
 
   def cobble
     self.condition = "new"
