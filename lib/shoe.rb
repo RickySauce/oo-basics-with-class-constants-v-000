@@ -10,7 +10,7 @@ class Shoe
   def initialize(brand)
       @brand = brand
         BRANDS << brand
-        BRANDS.delete_if? do |existing_brands|
+        BRANDS.delete_if do |existing_brands|
           existing_brands == brand
           end
   end
