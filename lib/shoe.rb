@@ -9,7 +9,7 @@ class Shoe
 
   def initialize(brand)
       @brand = brand
-      BRANDS << brand if BRANDS == nil || BRANDS.any? do |existing_brands|
+      BRANDS << brand if BRANDS == [] || BRANDS.any? do |existing_brands|
         existing_brands != brand
           end
   end
