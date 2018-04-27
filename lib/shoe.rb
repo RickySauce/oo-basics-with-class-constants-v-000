@@ -11,7 +11,7 @@ class Shoe
       @brand = brand
         BRANDS << @brand
         BRANDS.delete_if do |existing_brands|
-          existing_brands == brand
+          existing_brands == existing_brands * 2
           end
   end
 
